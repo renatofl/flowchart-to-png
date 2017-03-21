@@ -111,8 +111,20 @@ $json = '{
     }
   ]
 }';
+
+
 $flowChartImage = new FlowChartImage();
 $flowChartImage->setContent($json);
 $flowChartImage->generate()->toPng($path);
 
 ```
+
+Change Node Color
+
+------
+
+```php
+
+$image->setSelectedAction('flowchartWindow1489779664638');
+$image->setSelectedColor([255, 0, 0]);
+
