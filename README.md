@@ -8,7 +8,7 @@ Setup
 ```javascript
 {
   "require": {
-      "renato127/flowchart-to-png": "0.*"
+      "renato127/flowchart-to-png": "dev-master"
   }
 }
 ```
