@@ -1,32 +1,18 @@
 <?php
 
+namespace RNT;
+
 class FlowChartImage
 {
-    public $content;
+    protected $content;
     public $selectedAction;
     public $selectedColor;
     private $jsonData;
-    private $rawData;
     private $imageHandle;
     private $boxColor;
     private $imageProperties;
     private $boxProperties;
     private $backgroundColor;
-
-    public function init()
-    {
-        return parent::init();
-    }
-
-    public function run()
-    {
-        $this->jsonData = json_decode(utf8_encode($this->content));
-        $this->rawData  = $this->render('fidelize.widgets.flowchart.views.view',
-            [
-            'content' => $this->content,
-            ], true);
-        return true;
-    }
 
     public function generate()
     {
@@ -36,11 +22,6 @@ class FlowChartImage
         $this->drawNodes();
 
         return $this;
-    }
-
-    public function getData()
-    {
-        return $this->rawData;
     }
 
 	public function setContent($content)
