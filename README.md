@@ -120,7 +120,6 @@ $flowChartImage->generate()->toPng($path);
 ```
 
 Change Node Color
-
 ------
 
 ```php
