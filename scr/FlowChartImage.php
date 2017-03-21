@@ -24,20 +24,20 @@ class FlowChartImage
         return $this;
     }
 
-	public function setContent($content)
-	{
-		$this->content = $content;
-	}
+    public function setContent($content)
+    {
+        $this->content = $content;
+    }
 
-	public function setSelectedAction($selectedAction)
-	{
-		$this->selectedAction = $selectedAction;
-	}
+    public function setSelectedAction($selectedAction)
+    {
+        $this->selectedAction = $selectedAction;
+    }
 
-	public function setSelectedColor($selectedColor)
-	{
-		$this->selectedColor = $selectedColor;
-	}
+    public function setSelectedColor($selectedColor)
+    {
+        $this->selectedColor = $selectedColor;
+    }
 
     public function initImage()
     {
@@ -336,3 +336,4 @@ class FlowChartImage
         }
     }
 }
+
