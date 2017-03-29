@@ -1,5 +1,5 @@
 {
-    "name": "renato127/flowchart-to-png",
+    "name": "Fidelize/flowchart-to-png",
     "description": "Convert from flowchart json encoded to png",
     "keywords": ["php", "flowchart", "png", "Fidelize"],
     "type": "project",
@@ -11,7 +11,7 @@
     },
     "autoload": {
         "psr-4": {
-            "RNT\\": "src/"
+            "Fidelize\\Flowchart\\ToPng\\": "src/"
         }
     },
     "suggest": {
