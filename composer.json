@@ -7,11 +7,13 @@
         "php": ">=5.6"
     },
     "require-dev": {
-        "phpunit/phpunit": "~6.0"
+        "phpunit/phpunit": "~5.7",
+        "mikey179/vfsStream": "1.6.*"
     },
     "autoload": {
         "psr-4": {
-            "RNT\\": "src/"
+            "RNT\\": "src/",
+            "RNT\\Test\\": "tests/"
         }
     },
     "suggest": {
