@@ -81,7 +81,7 @@ class FlowChartImage
     public function getBase64()
     {
         ob_start();
-        $this->toPng();
+        $this->generate()->toPng();
         $base64 = base64_encode(ob_get_contents());
         ob_end_clean();
 
