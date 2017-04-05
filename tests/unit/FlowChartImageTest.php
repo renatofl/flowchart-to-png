@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use RNT\FlowChartImage;
+use Fidelize\Flowchart\ToPng\FlowChartImage;
 
 class FlowChartImageTest extends TestCase
 {
