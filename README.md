@@ -8,7 +8,7 @@ Setup
 ```javascript
 {
   "require": {
-      "renato127/flowchart-to-png": "dev-master"
+      "fidelize/flowchart-to-png": "1.0.0"
   }
 }
 ```
@@ -126,4 +126,3 @@ Change Node Color
 
 $image->setSelectedAction('flowchartWindow1489779664638');
 $image->setSelectedColor([255, 0, 0]);
-
