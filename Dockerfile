@@ -1,4 +1,4 @@
-FROM php:7-fpm-alpine
+FROM php:5-fpm-alpine
 
 MAINTAINER Marco Araujo <contact@marcojunior.com>
 

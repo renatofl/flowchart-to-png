@@ -8,7 +8,7 @@
 
     <testsuites>
         <testsuite name="Testes unitários">
-            <directory>tests/unit</directory>
+            <directory>tests/</directory>
         </testsuite>
     </testsuites>
 
