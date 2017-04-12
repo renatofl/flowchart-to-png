@@ -8,13 +8,13 @@ class FlowChartImageTest extends TestCase
     public function testToPngShouldGenerateCorrectly()
     {
         $filename = './tests/TestImageBase64.png';
-        $expected = base64_encode(file_get_contents($filename));
+        $expected = mb_convert_encoding(file_get_contents($filename), "UTF-8", "BASE64");
         $image = new FlowChartImage();
         $image->setContent($this->simpleFlowchart());
         $image->generate();
         ob_start();
             $image->toPng();
-            $result = base64_encode(ob_get_contents());
+            $result = mb_convert_encoding(ob_get_contents(), "UTF-8", "BASE64");
         ob_end_clean();
         $this->assertEquals($expected, $result);
     }

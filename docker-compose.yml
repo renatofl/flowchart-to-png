@@ -6,8 +6,6 @@ services:
             dockerfile: Dockerfile
         container_name: to-test-flowchart
         restart: always
-        ports:
-         - "8080:80"
         volumes:
          - ./:/flowchart
         tty: true
