@@ -19,6 +19,7 @@
         "php": ">=7.0"
     },
     "scripts" : {
-        "test" : "phpunit"
+        "test" : "phpunit",
+        "coverage" : "phpunit --coverage-clover=coverage.clover"
     }
 }
