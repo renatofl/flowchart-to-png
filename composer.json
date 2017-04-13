@@ -21,7 +21,7 @@
     },
     "scripts" : {
         "test" : "phpunit",
-        "coverage" : "phpunit --coverage-clover=coverage.clover",
-        "codacy" : "codacycoverage clover coverage.clover"
+        "coverage" : "phpunit --coverage-clover=coverage.xml",
+        "codacy" : "codacycoverage clover coverage.xml"
     }
 }
