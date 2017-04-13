@@ -7,8 +7,7 @@ class FlowChartImageTest extends TestCase
 {
     public function testToPngShouldGenerateCorrectly()
     {
-        $filename = './tests/TestImageBase64.png';
-        $expected = md5_file($filename);
+        $expected = 'e51fb07e78eebe558a22048c18d97909';
         $image = new FlowChartImage();
         $image->setContent($this->simpleFlowchart());
         $image->generate();
