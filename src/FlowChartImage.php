@@ -1,6 +1,6 @@
 <?php
 
-namespace RNT;
+namespace Fidelize\Flowchart\ToPng;
 
 class FlowChartImage
 {
@@ -336,4 +336,3 @@ class FlowChartImage
         }
     }
 }
-
