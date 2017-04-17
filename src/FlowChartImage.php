@@ -1,6 +1,6 @@
 <?php
 
-namespace RNT;
+namespace Fidelize\Flowchart\ToPng;
 
 class FlowChartImage
 {
@@ -78,6 +78,16 @@ class FlowChartImage
         imagedestroy($this->imageHandle);
     }
 
+    public function getBase64()
+    {
+        ob_start();
+        $this->generate()->toPng();
+        $base64 = base64_encode(ob_get_contents());
+        ob_end_clean();
+
+        return $base64;
+    }
+
     public function drawActionBox($top, $left, $text, $type, $nodeId)
     {
         $height  = $this->boxProperties['height'];
@@ -93,9 +103,9 @@ class FlowChartImage
             $radius = 45;
         }
         $black = imagecolorallocate($this->imageHandle, 0, 0, 0);
-        $this->draw_roundrectangle($this->imageHandle, $left, $top, $left + $width, $top + $height, $radius,
+        $this->drawRoundrectangle($this->imageHandle, $left, $top, $left + $width, $top + $height, $radius,
             $this->boxColor, 1);
-        $this->draw_roundrectangle($this->imageHandle, $left + $border, $top + $border, $left + $width - $border,
+        $this->drawRoundrectangle($this->imageHandle, $left + $border, $top + $border, $left + $width - $border,
             $top + $height - $border, $radius, $bgColor, 1);
 
         $size = 5;
@@ -267,7 +277,7 @@ class FlowChartImage
             $this->selectedColor[1], $this->selectedColor[2]);
     }
 
-    private function draw_roundrectangle($img, $x1, $y1, $x2, $y2, $radius, $color, $filled = 1)
+    private function drawRoundrectangle($img, $x1, $y1, $x2, $y2, $radius, $color, $filled = 1)
     {
         if ($filled == 1) {
             imagefilledrectangle($img, $x1 + $radius, $y1, $x2 - $radius, $y2, $color);
@@ -336,4 +346,3 @@ class FlowChartImage
         }
     }
 }
-
